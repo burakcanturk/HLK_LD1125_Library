@@ -3,23 +3,17 @@
 
 #define HLK_LD1125_BAUD 115200
 
-//------------------------------------------------
+#define ld1125_occ_txt "occ,"
+#define ld1125_mov_txt "mov,"
 
-#define occ_txt "occ,"
-#define mov_txt "mov,"
+#define ld1125_conf_vals_len 10
 
-//------------------------------------------------
+#define ld1125_get_all_str "get_all"
+#define ld1125_get_all_suc_str "received message: get_all\r"
 
-#define conf_vals_len 10
-
-#define get_all_str "get_all"
-#define get_all_suc_str "received message: get_all\r"
-
-//------------------------------------------------
-
-#define save_str "save"
-#define save_suc_str "received message: save\r"
-#define save_suc2_str "all vars have been saved\r"
+#define ld1125_save_str "save"
+#define ld1125_save_suc_str "received message: save\r"
+#define ld1125_save_suc2_str "all vars have been saved\r"
 
 //------------------------------------------------
 

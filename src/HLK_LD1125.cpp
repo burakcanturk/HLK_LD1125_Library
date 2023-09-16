@@ -114,7 +114,7 @@ void HLK_LD1125::read() {
 
     String data_type = data_str.substring(0, data_str.indexOf(' '));
 
-    if (data_type == mov_txt) {
+    if (data_type == ld1125_mov_txt) {
 
       ld1125_data.dis_type = "mov";
 
@@ -140,7 +140,7 @@ void HLK_LD1125::read() {
       }
     }
 
-    else if (data_type == occ_txt) {
+    else if (data_type == ld1125_occ_txt) {
 
       ld1125_data.dis_type = "occ";
 
@@ -175,7 +175,7 @@ void HLK_LD1125::read() {
 
     String data_type = data_str.substring(0, data_str.indexOf(' '));
 
-    if (data_type == mov_txt) {
+    if (data_type == ld1125_mov_txt) {
 
       ld1125_data.dis_type = "mov";
 
@@ -201,7 +201,7 @@ void HLK_LD1125::read() {
       }
     }
 
-    else if (data_type == occ_txt) {
+    else if (data_type == ld1125_occ_txt) {
 
       ld1125_data.dis_type = "occ";
 
@@ -257,13 +257,13 @@ void HLK_LD1125::getAllSettings() {
 
     String get_all_suc = "";
 
-    SS->println(get_all_str);
+    SS->println(ld1125_get_all_str);
 
     get_all_suc = SS->readStringUntil('\n');
 
-    if (get_all_suc == get_all_suc_str) {
+    if (get_all_suc == ld1125_get_all_suc_str) {
 
-      for (int i = 0; i < conf_vals_len; i++) {
+      for (int i = 0; i < ld1125_conf_vals_len; i++) {
 
         String conf_data_str = SS->readStringUntil('\n');
 
@@ -317,15 +317,15 @@ void HLK_LD1125::getAllSettings() {
 
     String get_all_suc = "";
 
-    HS->println(get_all_str);
+    HS->println(ld1125_get_all_str);
 
     //HS->readStringUntil('\n');
 
     get_all_suc = HS->readStringUntil('\n');
 
-    if (get_all_suc == get_all_suc_str) {
+    if (get_all_suc == ld1125_get_all_suc_str) {
 
-      for (int i = 0; i < conf_vals_len; i++) {
+      for (int i = 0; i < ld1125_conf_vals_len; i++) {
 
         String conf_data_str = HS->readStringUntil('\n');
 
@@ -420,28 +420,28 @@ bool HLK_LD1125::saveAllSettings() {
 
   if (is_soft) {
 
-    SS->println(save_str);
+    SS->println(ld1125_save_str);
 
     SS->readStringUntil('\n');
 
     String save_suc = SS->readStringUntil('\n');
     String save_suc2 = SS->readStringUntil('\n');
 
-    return save_suc == save_suc_str and save_suc2 == save_suc2_str;
+    return save_suc == ld1125_save_suc_str and save_suc2 == ld1125_save_suc2_str;
   }
 
 #endif
 
   if (not is_soft) {
 
-    HS->println(save_str);
+    HS->println(ld1125_save_str);
 
     HS->readStringUntil('\n');
 
     String save_suc = HS->readStringUntil('\n');
     String save_suc2 = HS->readStringUntil('\n');
 
-    return save_suc == save_suc_str and save_suc2 == save_suc2_str;
+    return save_suc == ld1125_save_suc_str and save_suc2 == ld1125_save_suc2_str;
   }
 }
 
